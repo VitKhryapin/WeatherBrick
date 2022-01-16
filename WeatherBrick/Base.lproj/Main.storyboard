@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="ViewController" storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherBrick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_background" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-f6-a3e">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1K-oT-cPq">
+                                <rect key="frame" x="20" y="480" width="67" height="140"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осадки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJq-jR-RXm">
+                                <rect key="frame" x="20" y="599" width="127" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilF-YZ-d2T">
+                                <rect key="frame" x="141" y="717.66666666666663" width="108.33333333333331" height="19.333333333333371"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Страна, город">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uon-MH-jIF">
+                                <rect key="frame" x="185" y="417" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aYM-hl-mDr">
+                                <rect key="frame" x="95" y="-40" width="215" height="466"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="466" id="BiP-6b-k3V"/>
+                                </constraints>
+                            </imageView>
+                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1b-Bk-Np2">
+                                <rect key="frame" x="115" y="779" width="160" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="HEU-yT-N8A"/>
+                                    <constraint firstAttribute="height" constant="69" id="Zc4-rF-Ee7"/>
+                                </constraints>
+                                <state key="normal" title="INFO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapInfoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xx0-ts-rM1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uon-MH-jIF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1Yc-YU-fOd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="P1K-oT-cPq" secondAttribute="trailing" symbolic="YES" id="B0c-Gr-uXi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rjH-f6-a3e" secondAttribute="trailing" id="BPd-cd-wb4"/>
+                            <constraint firstItem="rjH-f6-a3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IWa-yZ-UIr"/>
+                            <constraint firstItem="B1b-Bk-Np2" firstAttribute="top" secondItem="ilF-YZ-d2T" secondAttribute="bottom" constant="42" id="La8-aI-fw8"/>
+                            <constraint firstAttribute="top" secondItem="rjH-f6-a3e" secondAttribute="top" id="MVl-WW-dhL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aYM-hl-mDr" secondAttribute="trailing" constant="80" id="Qvx-My-TEB"/>
+                            <constraint firstItem="B1b-Bk-Np2" firstAttribute="centerX" secondItem="ilF-YZ-d2T" secondAttribute="centerX" id="Rbe-o7-Dhu"/>
+                            <constraint firstItem="tJq-jR-RXm" firstAttribute="top" secondItem="P1K-oT-cPq" secondAttribute="bottom" constant="-21" id="TBj-4R-LAq"/>
+                            <constraint firstItem="rjH-f6-a3e" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="dSm-Xd-JUY"/>
+                            <constraint firstItem="aYM-hl-mDr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-40" id="e1Z-Rd-zLc"/>
+                            <constraint firstItem="P1K-oT-cPq" firstAttribute="top" secondItem="aYM-hl-mDr" secondAttribute="bottom" constant="54" id="eJJ-jh-U8g"/>
+                            <constraint firstItem="aYM-hl-mDr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="gmk-9E-ozu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tJq-jR-RXm" secondAttribute="trailing" symbolic="YES" id="jta-st-9zu"/>
+                            <constraint firstItem="P1K-oT-cPq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nch-Vx-ugV"/>
+                            <constraint firstItem="tJq-jR-RXm" firstAttribute="leading" secondItem="P1K-oT-cPq" secondAttribute="leading" id="rYa-v2-hle"/>
+                            <constraint firstItem="uon-MH-jIF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="trM-uo-LBz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ilF-YZ-d2T" secondAttribute="bottom" constant="73" id="wQv-PO-XSO"/>
+                            <constraint firstItem="ilF-YZ-d2T" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xY7-7d-QwZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="uon-MH-jIF" id="58a-kU-jBG"/>
+                        <outlet property="brickIconImage" destination="aYM-hl-mDr" id="nDD-BT-AzU"/>
+                        <outlet property="cityLabel" destination="ilF-YZ-d2T" id="80c-sy-MR0"/>
+                        <outlet property="infoButton" destination="B1b-Bk-Np2" id="dZt-a5-SIX"/>
+                        <outlet property="tempLabel" destination="P1K-oT-cPq" id="FGU-ee-ZXd"/>
+                        <outlet property="weatherDescriptionLabel" destination="tJq-jR-RXm" id="0ht-3w-5fX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.384615384615387" y="75.355450236966817"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image_background" width="375" height="811"/>
+    </resources>
+</document>

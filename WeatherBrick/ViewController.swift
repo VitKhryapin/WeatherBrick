@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     var state: State = .close
     let locationManager = CLLocationManager()
     var weatherData = WeatherData()
-    var animator: UIViewPropertyAnimator!
     let labelOpenInfo = UILabel()
     let darkLabelInfo = UILabel()
     let layer0 = CAGradientLayer()
@@ -39,6 +38,7 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(closeInfoView))
         view.addGestureRecognizer(tapGesture)
     }
+    
     
     func updateView() {
         weatherDescriptionLabel.text = DataSource.weatherIDs[weatherData.weather[0].id]
@@ -79,7 +79,6 @@ class ViewController: UIViewController {
             
             do {
                 self.weatherData = try JSONDecoder().decode(WeatherData.self, from: data!)
-                //print(self.weatherData)
                 DispatchQueue.main.async {
                     self.updateView()
                     self.getAddressFromLatLon(pdblLatitude: latitude, withLongitude: longitude)
@@ -202,17 +201,16 @@ class ViewController: UIViewController {
         let parent = self.view!
         parent.addSubview(darkLabelInfo)
         darkLabelInfo.translatesAutoresizingMaskIntoConstraints = false
-        darkLabelInfo.widthAnchor.constraint(equalToConstant: 277).isActive = true
-        darkLabelInfo.heightAnchor.constraint(equalToConstant: 372).isActive = true
+        darkLabelInfo.widthAnchor.constraint(equalToConstant: view.bounds.width * 0.75).isActive = true
+        darkLabelInfo.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.45).isActive = true
         darkLabelInfo.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 49).isActive = true
         darkLabelInfo.topAnchor.constraint(equalTo: parent.topAnchor, constant: 220).isActive = true
-        labelOpenInfo.frame = CGRect(x: 0, y: 0, width: 269, height: 372)
         labelOpenInfo.layer.backgroundColor = UIColor(red: 1, green: 0.6, blue: 0.375, alpha: 1).cgColor
         labelOpenInfo.layer.cornerRadius = 15
         parent.addSubview(labelOpenInfo)
         labelOpenInfo.translatesAutoresizingMaskIntoConstraints = false
-        labelOpenInfo.widthAnchor.constraint(equalToConstant: 269).isActive = true
-        labelOpenInfo.heightAnchor.constraint(equalToConstant: 372).isActive = true
+        labelOpenInfo.widthAnchor.constraint(equalToConstant: view.bounds.width * 0.73).isActive = true
+        labelOpenInfo.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.45).isActive = true
         labelOpenInfo.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 49).isActive = true
         labelOpenInfo.topAnchor.constraint(equalTo: parent.topAnchor, constant: 220).isActive = true
         labelOpenInfo.numberOfLines = 0
@@ -259,11 +257,6 @@ class ViewController: UIViewController {
         infoButton.superview?.layer.addSublayer(layer0)
         let parent = self.view!
         parent.addSubview(infoButton)
-        infoButton.translatesAutoresizingMaskIntoConstraints = false
-        infoButton.widthAnchor.constraint(equalToConstant: 160).isActive = true
-        infoButton.heightAnchor.constraint(equalToConstant: 69).isActive = true
-        infoButton.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 115).isActive = true
-        infoButton.topAnchor.constraint(equalTo: parent.topAnchor, constant: 779).isActive = true
         state = .open
     }
     
@@ -276,7 +269,6 @@ extension ViewController: CLLocationManagerDelegate {
     func  locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let lastLocation = locations.last {
             updateWeatherInfo(latitude: lastLocation.coordinate.latitude, longitude: lastLocation.coordinate.longitude)
-             //print(lastLocation.coordinate.latitude, lastLocation.coordinate.longitude)
         }
     }
 }

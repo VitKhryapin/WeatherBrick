@@ -4,6 +4,7 @@
 //
 
 import XCTest
+
 @testable import WeatherBrick
 
 class WeatherBrickTests: XCTestCase {

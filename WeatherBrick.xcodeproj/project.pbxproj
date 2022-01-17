@@ -19,6 +19,7 @@
 		A3ACF2E727384B9800CEE97C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3ACF2E627384B9800CEE97C /* Localizable.strings */; };
 		FBD71589278D6C6F003EEC79 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD71588278D6C6F003EEC79 /* Data.swift */; };
 		FBD7158B278D84D1003EEC79 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD7158A278D84D1003EEC79 /* DataSource.swift */; };
+		FBD71590279422B6003EEC79 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FBD7158F279422B6003EEC79 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A3ACF2E627384B9800CEE97C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FBD71588278D6C6F003EEC79 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		FBD7158A278D84D1003EEC79 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		FBD7158F279422B6003EEC79 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		A3475EF2273305F200BF5E86 = {
 			isa = PBXGroup;
 			children = (
+				FBD7158F279422B6003EEC79 /* Podfile */,
 				A3475EFD273305F200BF5E86 /* WeatherBrick */,
 				A3475F12273305F400BF5E86 /* WeatherBrickTests */,
 				A3475F1D273305F400BF5E86 /* WeatherBrickUITests */,
@@ -181,6 +184,8 @@
 			dependencies = (
 			);
 			name = WeatherBrick;
+			packageProductDependencies = (
+			);
 			productName = WeatherBrick;
 			productReference = A3475EFB273305F200BF5E86 /* WeatherBrick.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +261,8 @@
 				Base,
 			);
 			mainGroup = A3475EF2273305F200BF5E86;
+			packageReferences = (
+			);
 			productRefGroup = A3475EFC273305F200BF5E86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +284,7 @@
 				A3475F06273305F400BF5E86 /* Assets.xcassets in Resources */,
 				A3ACF2E3273847B800CEE97C /* SF-Pro-Display-Semibold.otf in Resources */,
 				A3ACF2E1273847B000CEE97C /* SF-Pro-Display-Light.otf in Resources */,
+				FBD71590279422B6003EEC79 /* Podfile in Resources */,
 				A3475F04273305F200BF5E86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

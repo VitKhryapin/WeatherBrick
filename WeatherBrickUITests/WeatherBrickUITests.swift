@@ -4,6 +4,8 @@
 //
 
 import XCTest
+//import FBSnapshotTestCase
+@testable import WeatherBrick
 
 class WeatherBrickUITests: XCTestCase {
     override func setUp() {

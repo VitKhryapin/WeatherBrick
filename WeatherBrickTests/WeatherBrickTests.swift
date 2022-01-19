@@ -9,7 +9,6 @@ import XCTest
 
 class WeatherBrickTests: XCTestCase {
     var vc: ViewController!
-    
     override func setUp() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController
@@ -37,8 +36,6 @@ class WeatherBrickTests: XCTestCase {
             XCTAssertNotEqual(resultWeatherDescription, "Страна, город")
         }
     }
-    
-    
 }
 
 

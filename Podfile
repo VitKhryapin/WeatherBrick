@@ -8,11 +8,12 @@ target 'WeatherBrick' do
   # Pods for WeatherBrick
 
   target 'WeatherBrickTests' do
-   pod 'SnapshotTesting', '~> 1.9.0'
+    inherit! :search_paths
+    # Pods for testing
   end
 
   target 'WeatherBrickUITests' do
-  pod 'SnapshotTesting', '~> 1.9.0'
+    pod 'SnapshotTesting', '~> 1.9.0'
   end
 
 end

@@ -6,15 +6,13 @@ target 'WeatherBrick' do
   use_frameworks!
 
   # Pods for WeatherBrick
-pod 'SwiftLint'
+
   target 'WeatherBrickTests' do
-    use_frameworks!
-  pod 'iOSSnapshotTestCase'
+   pod 'SnapshotTesting', '~> 1.9.0'
   end
 
   target 'WeatherBrickUITests' do
-      target 'WeatherBrickTests' do
-    use_frameworks!
+  pod 'SnapshotTesting', '~> 1.9.0'
   end
 
 end

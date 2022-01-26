@@ -2,8 +2,7 @@
 //  DataSource.swift
 //  Weather
 //
-//  Created by Shakhvorostov on 23/11/2018.
-//  Copyright © 2018  ShMichail. All rights reserved.
+//  Created by Vitaly Khryapin on 11.01.2022.
 //
 
 import Foundation

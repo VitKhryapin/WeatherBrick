@@ -23,15 +23,7 @@ class WeatherBrickUITests: XCTestCase {
     }
     
     func verifyView(identifier: String, perPixelTolerance: CGFloat = 0.0, overallTolerance: CGFloat = 0.05 ) {
-            
         _ = app.screenshot().image
         }
-
-//    func testExample() throws {
-//        let app = XCUIApplication()
-//        app.launch()
-//        let vc = UIViewController()
-//            assertSnapshot(matching: vc, as: .image)
-//    }
 
 }

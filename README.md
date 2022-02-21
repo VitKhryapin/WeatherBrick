@@ -29,4 +29,5 @@ Application that works with the location and weather API.
 + Gesture Recognizers.
 + Third-party API.
 + XCTest.
++ Snapshot testing.
 + MVC.
